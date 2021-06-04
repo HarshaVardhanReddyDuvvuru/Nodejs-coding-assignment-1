@@ -1,0 +1,61 @@
+
+get http://localhost:3000/todos/?status=TO%20DO
+###
+
+get http://localhost:3000/todos/?priority=HIGH
+
+###
+
+get http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
+###
+get http://localhost:3000/todos/?search_q=Buy
+
+###
+get http://localhost:3000/todos/?category=LEARNING&status=DONE
+
+###
+
+get http://localhost:3000/todos/?category=HOME
+###
+
+get http://localhost:3000/todos/?category=LEARNING&priority=HIGH
+
+###
+
+
+### API 2
+
+get http://localhost:3000/todos/5
+
+### API 3
+
+get http://localhost:3000/agenda/?date=2021-10-21
+
+### API 4
+
+post http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 7,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO",
+  "category": "HOME",
+  "dueDate": "2021-3-24"
+}
+
+### API 5
+
+put http://localhost:3000/todos/7
+Content-Type: application/json
+
+{
+  "dueDate":"2020-10-20"
+}
+
+
+### API 6
+
+delete http://localhost:3000/todos/7
